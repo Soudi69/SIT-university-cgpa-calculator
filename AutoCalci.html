@@ -1,0 +1,242 @@
+<html>
+<head>
+<script type="text/javascript" src="calciCode.js">
+</script>
+</head>
+<body background="Homes.jpg" text="white"><center>
+<hr/><h3> SEMESTER GRADE AND PERCENTAGE CALCULATOR (AutoCalci!) </h3>
+<h5> By: SFK69 </h5>
+</center><hr/>
+<h3> Enter the following details: </h3>
+<form name="form1" action="GUIDELINES.html">
+<label> Name: </label><input type="text" id="sname" size="30"><br/>
+<label> USN: </label><input type="text" id="USN" size="10"><br/>
+<label> Branch: </label><input type="text" id="branch" size="15"><br/>
+<label> Semester: </label><input type="text" id="sem" size="2"><input type="reset" value="CLEAR" onclick="setOff();"/>
+<input type="submit" value="Guide!"/>
+<hr/>
+<center><label> Total number of subjects </label> <input type="text" id="subs" size="2">
+<input type="button" value="TOTAL SEMESTER CREDITS " onclick="Grade('visible');"/>
+<input type="button" value=" SUBJECT GRADE *" onclick="SEEmode('visible')"/>
+<input type="button" value=" CIE *" onclick="CIEmode('visible')"/>
+<input type="button" value="COPY VALUES" onclick="copyVal()"/>
+<input type="button" value="RESULT SHEET!" onclick="RESmode('visible')"/>
+<input type="reset" value="CLEAR ALL"><br>
+</center>
+
+<div id="def" style="visibility:hidden;">
+
+<table cellpadding="2" border="2">
+<th> Sl.no </th><th> Subject Name </th><th> Subject Code </th><th>SUB Credits </th>
+<tr><td> 01 </td><td> <input type="text" id="sn1" size="25"></td>
+<td> <input type="text" id="sc1" size="15"/></td>
+<td><input type="text" id="cr1"> </td></tr>
+
+<tr><td> 02 </td><td> 
+<input type="text" id="sn2" size="25" /></td>
+<td> <input type="text" id="sc2" size="15"/></td>
+<td><input type="text" id="cr2"> </td></tr>
+
+<tr><td> 03 </td><td> <input type="text" id="sn3" size="25" </td>
+<td> <input type="text" id="sc3" size="15"/></td>
+<td><input type="text" id="cr3"> </td></tr>
+
+<tr><td> 04 </td><td> <input type="text" id="sn4" size="25"></td>
+<td> <input type="text" id="sc4"size="15"/></td><td><input type="text" id="cr4"> </td></tr>
+
+<tr><td> 05 </td><td> <input type="text" id="sn5" size="25" /></td>
+<td> <input type="text" id="sc5" size="15"/></td><td><input type="text" id="cr5"> </td></tr>
+<tr><td> 06 </td><td> <input type="text" id="sn6" size="25"/></td>
+<td> <input type="text" id="sc6" size="15"/></td><td><input type="text" id="cr6">  </td></tr>
+<tr><td> 07 </td><td> <input type="text" id="sn7" size="25"/> </td>
+<td> <input type="text" id="sc7" size="15"/></td><td><input type="text" id="cr7">  </td></tr>
+<tr><td> 08 </td><td> <input type="text" id="sn8" size="25"/></td>
+<td> <input type="text" id="sc8"size="15"/></td><td><input type="text" id="cr8"> </td></tr>
+<tr><td> 09 </td><td> <input type="text" id="sn9" size="25"/></td>
+<td> <input type="text" id="sc9"size="15"/></td><td><input type="text" id="cr9"> </td></tr>
+<tr><td> 10 </td><td> <input type="text" id="sn10" size="25"/></td>
+<td> <input type="text" id="sc10"size="15"/></td><td><input type="text" id="cr10"> </td></tr>
+<tr><td> 11 </td><td> <input type="text" id="sn11" size="25"/></td>
+<td> <input type="text" id="sc11"size="15"/></td><td><input type="text" id="cr11"> </td></tr>
+<tr><td> 12 </td><td> <input type="text" id="sn12" size="25"/></td>
+<td> <input type="text" id="sc12"size="15"/></td><td><input type="text" id="cr12"> </td></tr>
+<tr><td> 13 </td><td> <input type="text" id="sn13" size="25"/></td>
+<td> <input type="text" id="sc13"size="15"/></td><td><input type="text" id="cr13"> </td></tr>
+<tr><td> 14 </td><td> <input type="text" id="sn14" size="25"/></td>
+<td> <input type="text" id="sc14"size="15"/></td><td><input type="text" id="cr14"> </td></tr>
+<tr><td> 15 </td><td> <input type="text" id="sn15" size="25"/></td>
+<td> <input type="text" id="sc15"size="15"/></td><td><input type="text" id="cr15"> </td></tr>
+<tr> <td></td><td></td><td><input type="button" onclick="credits1()" value="Total Credits"></td><td><input type="text" id="crt1"> </td></tr>
+<br/>
+</table>
+<font size="3" color="red" face="times new roman"> NOTE: Please enter  accurate subject credits of the semester </font>
+<hr/>
+</div>
+<div id="CIE" style="visibility:hidden"><h2 align="center"> CIE MARKS CALCULATION! </h2>
+<table>
+<th><input type="button" onclick="calculate()" value="Compute All CIE"></th>
+<th><input type="text" id="s1" size="7"value="Subject 1"></th>
+<th><input type="text" id="s2" size="7" value="Subject 2"></th>
+<th><input type="text" id="s3" size="7" value="Subject 3"></th>
+<th><input type="text" id="s4" size="7" value="Subject 4"></th>
+<th><input type="text" id="s5" size="7" value="Subject 5"></th>
+<th><input type="text" id="s6" size="7" value="Subject 6"></th>
+<th><input type="text" id="s7" size="7" value="Subject 7"></th>
+<th><input type="text" id="s8" size="7" value="Subject 8"></th> 
+<th><input type="text" id="s9" size="7" value="Subject 9"></th> 
+<th><input type="text" id="s10" size="7" value="Subject 10"></th>
+<th><input type="text" id="s11" size="7" value="Subject 11"></th>
+<th><input type="text" id="s12" size="7" value="Subject 12"></th>
+<th><input type="text" id="s13" size="7" value="Subject 13"></th> 
+<th><input type="text" id="s14" size="7" value="Subject 14"></th> 
+<th><input type="text" id="s15" size="7" value="Subject 15"></th>
+
+<tr><td>QUIZ 1:(MAX:15)  </td>
+<td><input type="text" id="sq1" size="2"></td>
+<td><input type="text" id="sq2" size="2"></td><td><input type="text" id="sq3" size="2"></td>
+<td><input type="text" id="sq4" size="2"></td><td><input type="text" id="sq5" size="2"></td><td>
+<input type="text" id="sq6" size="2"></td>
+<td><input type="text" id="sq7" size="2"></td>
+<td><input type="text" id="sq8" size="2"></td><td><input type="text" id="sq9" size="2"></td>
+<td><input type="text" id="sq10" size="2"></td>
+<td><input type="text" id="sq11" size="2"></td>
+<td><input type="text" id="sq12" size="2"></td>
+<td><input type="text" id="sq13" size="2"></td><td><input type="text" id="sq14" size="2"></td>
+<td><input type="text" id="sq15" size="2"></td></tr>
+
+<tr><td>QUIZ 2: (MAX:15) </td><td><input type="text" id="sqq1" size="2"></td>
+<td><input type="text" id="sqq2" size="2"></td>
+<td><input type="text" id="sqq3" size="2"></td>
+<td><input type="text" id="sqq4" size="2"></td><td><input type="text" id="sqq5" size="2"></td>
+<td><input type="text" id="sqq6" size="2"></td>
+<td><input type="text" id="sqq7" size="2"></td>
+<td><input type="text" id="sqq8" size="2"></td><td><input type="text" id="sqq9" size="2"></td>
+<td><input type="text" id="sqq10" size="2"></td>
+<td><input type="text" id="sqq11" size="2"></td>
+<td><input type="text" id="sqq12" size="2"></td>
+<td><input type="text" id="sqq13" size="2"></td><td><input type="text" id="sqq14" size="2"></td>
+<td><input type="text" id="sqq15" size="2"></td></tr>
+
+<tr><td>QUIZ 3: (MAX:15)</td><td><input type="text" id="sqa1" size="2"></td>
+<td><input type="text" id="sqa2" size="2"></td>
+<td><input type="text" id="sqa3" size="2"></td>
+<td><input type="text" id="sqa4" size="2"></td><td><input type="text" id="sqa5" size="2"></td>
+<td><input type="text" id="sqa6" size="2"></td>
+<td><input type="text" id="sqa7" size="2"></td>
+<td><input type="text" id="sqa8" size="2"></td><td><input type="text" id="sqa9" size="2"></td>
+<td><input type="text" id="sqa10" size="2"></td>
+<td><input type="text" id="sqa11" size="2"></td>
+<td><input type="text" id="sqa12" size="2"></td>
+<td><input type="text" id="sqa13" size="2"></td><td><input type="text" id="sqa14" size="2"></td>
+<td><input type="text" id="sqa15" size="2"></td></tr></tr>
+
+<tr><td>QUIZ 4: (MAX:15)</td><td><input type="text" id="sqb1" size="2"></td>
+<td><input type="text" id="sqb2" size="2"></td>
+<td><input type="text" id="sqb3" size="2"></td>
+<td><input type="text" id="sqb4" size="2"></td><td><input type="text" id="sqb5" size="2"></td>
+<td><input type="text" id="sqb6" size="2"></td>
+<td><input type="text" id="sqb7" size="2"></td>
+<td><input type="text" id="sqb8" size="2"></td><td><input type="text" id="sqb9" size="2"></td>
+<td><input type="text" id="sqb10" size="2"></td>
+<td><input type="text" id="sqb11" size="2"></td>
+<td><input type="text" id="sqb12" size="2"></td>
+<td><input type="text" id="sqb13" size="2"></td><td><input type="text" id="sqb14" size="2"></td>
+<td><input type="text" id="sqb15" size="2"></td></tr>
+
+<tr><td>Assingment: (MAX:04)</td><td><input type="text" id="ass1" size="2"></td>
+<td><input type="text" id="ass2" size="2">
+</td><td><input type="text" id="ass3" size="2"></td>
+<td><input type="text" id="ass4" size="2"></td><td><input type="text" id="ass5" size="2"></td>
+<td><input type="text" id="ass6" size="2"></td>
+<td><input type="text" id="ass7" size="2"></td>
+<td><input type="text" id="ass8" size="2"></td><td><input type="text" id="ass9" size="2"></td>
+<td><input type="text" id="ass10" size="2"></td>
+<td><input type="text" id="ass11" size="2"></td>
+<td><input type="text" id="ass12" size="2"></td>
+<td><input type="text" id="ass13" size="2"></td><td><input type="text" id="ass14" size="2"></td>
+<td><input type="text" id="ass15" size="2"></td></tr></tr>
+
+
+<tr><td>Test 1:(MAX:50) </td><td><input type="text" id="ts1" size="2"></td><td><input type="text" id="ts2" size="2"></td><td><input type="text" id="ts3" size="2"></td>
+<td><input type="text" id="ts4" size="2"></td><td><input type="text" id="ts5" size="2"></td><td><input type="text" id="ts6" size="2"></td><td><input type="text" id="ts7" size="2"></td>
+<td><input type="text" id="ts8" size="2"></td><td><input type="text" id="ts9" size="2"></td><td><input type="text" id="ts10" size="2"></td>
+
+<td><input type="text" id="ts11" size="2"></td><td><input type="text" id="ts12" size="2"></td><td><input type="text" id="ts13" size="2"></td>
+<td><input type="text" id="ts14" size="2"></td><td><input type="text" id="ts15" size="2"></td></tr>
+
+<tr><td> Test 2:(MAX:50) </td><td><input type="text" id="tss1" size="2"></td><td><input type="text" id="tss2" size="2"></td><td><input type="text" id="tss3" size="2"></td>
+<td><input type="text" id="tss4" size="2"></td><td><input type="text" id="tss5" size="2"></td><td><input type="text" id="tss6" size="2"></td><td><input type="text" id="tss7" size="2"></td>
+<td><input type="text" id="tss8" size="2"></td><td><input type="text" id="tss9" size="2"></td><td><input type="text" id="tss10" size="2"></td>
+<td><input type="text" id="tss11" size="2"></td><td><input type="text" id="tss12" size="2"></td><td><input type="text" id="tss13" size="2"></td>
+<td><input type="text" id="tss14" size="2"></td><td><input type="text" id="tss15" size="2"></td></tr>
+
+<tr><td><b>     TOTAL  CIE => </b></td><td><input type="text" id="cie1" size="4"></td><td><input type="text" id="cie2" size="4"></td><td><input type="text" id="cie3" size="4"></td>
+<td><input type="text" id="cie4" size="4"></td><td><input type="text" id="cie5" size="4"></td><td><input type="text" id="cie6" size="4">
+</td><td><input type="text" id="cie7" size="4"></td>
+<td><input type="text" id="cie8" size="4"></td><td><input type="text" id="cie9" size="4"></td><td><input type="text" id="cie10" size="4"></td>
+<td><input type="text" id="cie11" size="4"></td><td><input type="text" id="cie12" size="4"></td>
+<td><input type="text" id="cie13" size="4"></td><td><input type="text" id="cie14" size="4"></td><td><input type="text" id="cie15" size="4"></td></tr>
+<tr><td></td><td><input type="button" value="solve" onclick="aray1()"></td><td><input type="button" value="solve" onclick="aray2()"></td>
+<td><input type="button" value="solve" onclick="aray3()"></td>
+<td><input type="button" value="solve" onclick="aray4()"></td><td><input type="button" value="solve" onclick="aray5()"></td><td><input type="button" value="solve" onclick="aray6()"></td>
+<td><input type="button" value="solve" onclick="aray7()"></td><td><input type="button" value="solve" onclick="aray8()"></td><td><input type="button" value="solve" onclick="aray9()"></td>
+<td><input type="button" value="solve" onclick="aray10()"></td><td><input type="button" value="solve" onclick="aray11()"></td><td><input type="button" value="solve" onclick="aray12()"></td>
+<td><input type="button" value="solve" onclick="aray13()"></td><td><input type="button" value="solve" onclick="aray14()"></td><td><input type="button" value="solve" onclick="aray15()"></td></tr>
+
+</table>
+<input type="reset" value="CLEAR ALL"><br>
+</div>
+<div id="SEE" style="position:absolute; left:550; top:350; visibility:hidden">
+<table cellpadding="2" border="2">
+<th> SUBJECT NAME </th><th>CIE </th><th> 'SEE' MARKS (Max:100) </th><th> SUB Credits </th><th> Grade  </th>
+<tr><td><input type="text" id="sub1"   value="Subject 1"></td><td><input type="text" id="cm1" size="10" ></td><td><input type="text" id="m1"></td><td><input type="text" id="c1"></td><td><input type="text" id="G1" size="4"></td></tr>
+<tr><td><input type="text" id="sub2"   value="Subject 2"></td><td><input type="text" id="cm2" size="10"></td><td><input type="text" id="m2"></td><td><input type="text" id="c2"></td><td><input type="text" id="G2" size="4"></td></tr>
+<tr><td><input type="text" id="sub3"  value="Subject 3"></td><td><input type="text" id="cm3" size="10"></td><td><input type="text" id="m3"></td><td><input type="text" id="c3"></td><td><input type="text" id="G3" size="4"></td></tr>
+<tr><td><input type="text" id="sub4"  value="Subject 4"></td><td><input type="text" id="cm4" size="10"></td><td><input type="text" id="m4"></td><td><input type="text" id="c4"></td><td><input type="text" id="G4" size="4"></td></tr>
+<tr><td><input type="text" id="sub5"  value="Subject 5"></td><td><input type="text" id="cm5" size="10"></td><td><input type="text" id="m5"></td><td><input type="text" id="c5"></td><td><input type="text" id="G5" size="4"></td></tr>
+<tr><td><input type="text" id="sub6"  value="Subject 6"></td><td><input type="text" id="cm6" size="10"></td><td><input type="text" id="m6"></td><td><input type="text" id="c6"></td><td><input type="text" id="G6" size="4"></td></tr>
+<tr><td><input type="text" id="sub7"  value="Subject 7"></td><td><input type="text" id="cm7" size="10"></td><td><input type="text" id="m7"></td><td><input type="text" id="c7"></td><td><input type="text" id="G7" size="4"></td></tr>
+<tr><td><input type="text" id="sub8"  value="Subject 8"></td><td><input type="text" id="cm8" size="10"></td><td><input type="text" id="m8"></td><td><input type="text" id="c8"></td><td><input type="text" id="G8" size="4"></td></tr>
+<tr><td><input type="text" id="sub9"  value="Subject 9"></td><td><input type="text" id="cm9" size="10"></td><td><input type="text" id="m9"></td><td><input type="text" id="c9"></td><td><input type="text" id="G9" size="4"></td></tr>
+<tr><td><input type="text" id="sub10"  value="Subject 10"></td><td><input type="text" id="cm10" size="10"></td><td><input type="text" id="m10"></td><td><input type="text" id="c10"></td><td><input type="text" id="G10" size="4"></td></tr>
+<tr><td><input type="text" id="sub11"  value="Subject 11"></td><td><input type="text" id="cm11" size="10"></td><td><input type="text" id="m11"></td><td><input type="text" id="c11"></td><td><input type="text" id="G11" size="4"></td></tr>
+<tr><td><input type="text" id="sub12"  value="Subject 12"></td><td><input type="text" id="cm12" size="10"></td><td><input type="text" id="m12"></td><td><input type="text" id="c12"></td><td><input type="text" id="G12" size="4"></td></tr>
+<tr><td><input type="text" id="sub13" value="Subject 13"></td><td><input type="text" id="cm13" size="10"></td><td><input type="text" id="m13"></td><td><input type="text" id="c13"></td><td><input type="text" id="G13" size="4"></td></tr>
+<tr><td><input type="text" id="sub14"  value="Subject 14"></td><td><input type="text" id="cm14" size="10"></td><td><input type="text" id="m14"></td><td><input type="text" id="c14"></td><td><input type="text" id="G14" size="4"></td></tr>
+<tr><td><input type="text" id="sub15"  value="Subject 15"></td><td><input type="text" id="cm15" size="10"></td><td><input type="text" id="m15"></td><td><input type="text" id="c15"></td><td><input type="text" id="G15" size="4"></td></tr>
+<tr> <td colspan="2"> <input type="button" onclick="calSEE();" value="Calculate SEE Grade"></td><td><input type="button" value="COPY Values" onclick="copyVal()"/></td><td><input type="button" onclick="credits2()" value="Total Credits"></td><td><input type="text" id="crt2" size="5"> </td></tr>
+</table>
+</div><hr/>
+
+<div id="RES" style="position:absolute; left:210; top:350; visibility:hidden">
+<center><font face="times new roman" size="8"> RESULT SHEET </font>
+
+<table cellpadding="2" border="2"><center>
+<th bgcolor="green"> SUBJECT NAME </th><th bgcolor="green">SUBJECT CODE </th><th bgcolor="green"> CREDITS </th><th bgcolor="green"> CIE </th><th bgcolor="green"> GRADE POINTS </th><th bgcolor="green"> GRADE  </th>
+<tr><td><input type="text" id="rsub1"   value="Subject 1"></td><td><input type="text" id="rcd1" ></td><td><input type="text" id="rcr1"></td><td><input type="text" id="rc1"></td><td><input type="text" id="rGp1" ></td><td><input type="text" id="rg1" size="6"></td></tr>
+<tr><td><input type="text" id="rsub2"   value="Subject 2"></td><td><input type="text" id="rcd2"></td><td><input type="text" id="rcr2"></td><td><input type="text" id="rc2"></td><td><input type="text" id="rGp2"></td><td><input type="text" id="rg2" size="6"></td></tr>
+<tr><td><input type="text" id="rsub3"  value="Subject 3"></td><td><input type="text" id="rcd3"></td><td><input type="text" id="rcr3"></td><td><input type="text" id="rc3"></td><td><input type="text" id="rGp3"></td><td><input type="text" id="rg3"size="6"></td></tr>
+<tr><td><input type="text" id="rsub4"  value="Subject 4"></td><td><input type="text" id="rcd4"></td><td><input type="text" id="rcr4"></td><td><input type="text" id="rc4"></td><td><input type="text" id="rGp4"></td><td><input type="text" id="rg4"size="6"></td></tr>
+<tr><td><input type="text" id="rsub5"  value="Subject 5"></td><td><input type="text" id="rcd5"></td><td><input type="text" id="rcr5"></td><td><input type="text" id="rc5"></td><td><input type="text" id="rGp5"></td><td><input type="text" id="rg5"size="6"></td></tr>
+<tr><td><input type="text" id="rsub6"  value="Subject 6"></td><td><input type="text" id="rcd6"></td><td><input type="text" id="rcr6"></td><td><input type="text" id="rc6"></td><td><input type="text" id="rGp6"></td><td><input type="text" id="rg6"size="6"></td></tr>
+<tr><td><input type="text" id="rsub7"  value="Subject 7"></td><td><input type="text" id="rcd7"></td><td><input type="text" id="rcr7"></td><td><input type="text" id="rc7"></td><td><input type="text" id="rGp7"></td><td><input type="text" id="rg7"size="6"></td></tr>
+<tr><td><input type="text" id="rsub8"  value="Subject 8"></td><td><input type="text" id="rcd8"></td><td><input type="text" id="rcr8"></td><td><input type="text" id="rc8"></td><td><input type="text" id="rGp8"></td><td><input type="text" id="rg8"size="6"></td></tr>
+<tr><td><input type="text" id="rsub9"  value="Subject 9"></td><td><input type="text" id="rcd9"></td><td><input type="text" id="rcr9"></td><td><input type="text" id="rc9"></td><td><input type="text" id="rGp9"></td><td><input type="text" id="rg9"size="6"></td></tr>
+<tr><td><input type="text" id="rsub10"  value="Subject 10"></td><td><input type="text" id="rcd10"></td><td><input type="text" id="rcr10"></td><td><input type="text" id="rc10"></td><td><input type="text" id="rGp10" ></td><td><input type="text" id="rg10"size="6"></td></tr>
+<tr><td><input type="text" id="rsub11"  value="Subject 11"></td><td><input type="text" id="rcd11"></td><td><input type="text" id="rcr11"></td><td><input type="text" id="rc11"></td><td><input type="text" id="rGp11"></td><td><input type="text" id="rg11"size="6"></td></tr>
+<tr><td><input type="text" id="rsub12"  value="Subject 12"></td><td><input type="text" id="rcd12"></td><td><input type="text" id="rcr12"></td><td><input type="text" id="rc12"></td><td><input type="text" id="rGp12"></td><td><input type="text" id="rg12"size="6"></td></tr>
+<tr><td><input type="text" id="rsub13" value="Subject 13"></td><td><input type="text" id="rcd13"></td><td><input type="text" id="rcr13"></td><td><input type="text" id="rc13"></td><td><input type="text" id="rGp13"></td><td><input type="text" id="rg13"size="6"></td></tr>
+<tr><td><input type="text" id="rsub14"  value="Subject 14"></td><td><input type="text" id="rcd14"></td><td><input type="text" id="rcr14"></td><td><input type="text" id="rc14"></td><td><input type="text" id="rGp14"></td><td><input type="text" id="rg14"size="6"></td></tr>
+<tr><td><input type="text" id="rsub15"  value="Subject 15"></td><td><input type="text" id="rcd15"></td><td><input type="text" id="rcr15"></td><td><input type="text" id="rc15"></td><td><input type="text" id="rGp15"></td><td><input type="text" id="rg15"size="6"></td></tr>
+</center></table>
+<h2><b> SGPA (Max: 10): </b><input type="text" id="sgpa" ><br/>
+<h3> Percentage: <input type="text" id="per" ><br/>
+<h3> Result: <input type="text" id="result" size="30"><br/>
+</div>
+</form>
+
+<a href="developer.html"><font face="Comic Sans MS" size="4" align="right"> ABOUT the Developer !!</font></a>
+
+</body>
+</html>
+
